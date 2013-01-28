@@ -12,6 +12,13 @@ interface and HTML output of any WordPress site.
 *   Obfuscate email addresses
 *   Change excerpt length and ellipsis
 
+## Installation
+
+Copy the plugin directory into the `wp-content/plugins` directory in the
+WordPress directory. Then go to the Plugins screen and click Activate Plugin.
+See the [WordPress documentation](http://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation)
+for more details. 
+
 ## License
 
 Released under the [MIT License](http://www.opensource.org/licenses/MIT). See
