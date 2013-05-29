@@ -46,6 +46,7 @@ include CGIT_CORE_PATH . 'options.php';
 /**
  * Core plugin functions
  */
+include CGIT_CORE_PATH . 'includes/toolbar.php';
 include CGIT_CORE_PATH . 'includes/interface.php';
 include CGIT_CORE_PATH . 'includes/editor.php';
 include CGIT_CORE_PATH . 'includes/image-attributes.php';

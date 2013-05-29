@@ -5,6 +5,9 @@
  */
 function cgit_register_settings() {
 
+    // Toolbar
+    register_setting('cgit_core', 'hide_toolbar');
+
     // Interface
     register_setting('cgit_core', 'hide_posts');
     register_setting('cgit_core', 'hide_media');
@@ -70,6 +73,16 @@ function cgit_render_settings_page() {
         <h3>Interface</h3>
 
         <table class="form-table">
+
+            <tr>
+                <th>
+                    Toolbar
+                </th>
+                <td>
+                    <input type="checkbox" name="hide_toolbar" value="1"<?php echo get_option('hide_toolbar') ? ' checked="checked"' : ''; ?> />
+                    Hide toolbar for all users when viewing the site
+                </td>
+            </tr>
 
             <tr>
                 <th rowspan="5">
