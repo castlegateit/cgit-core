@@ -79,8 +79,10 @@ function cgit_render_settings_page() {
                     Toolbar
                 </th>
                 <td>
-                    <input type="checkbox" name="hide_toolbar" value="1"<?php echo get_option('hide_toolbar') ? ' checked="checked"' : ''; ?> />
-                    Hide toolbar for all users when viewing the site
+                    <label>
+                        <input type="checkbox" name="hide_toolbar" value="1"<?php echo get_option('hide_toolbar') ? ' checked="checked"' : ''; ?> />
+                        Hide toolbar for all users when viewing the site
+                    </label>
                 </td>
             </tr>
 
