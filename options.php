@@ -247,7 +247,7 @@ function cgit_render_settings_page() {
                     <label for="excerpt_more">Excerpt ellipsis</label>
                 </th>
                 <td>
-                    <input type="text" name="excerpt_more" id="excerpt_more" value="<?php echo get_option('excerpt_more'); ?>" />
+                    <input type="text" name="excerpt_more" id="excerpt_more" value="<?php echo htmlspecialchars(get_option('excerpt_more')); ?>" />
                 </td>
             </tr>
 
