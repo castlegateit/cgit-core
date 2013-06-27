@@ -32,6 +32,9 @@ function cgit_register_settings() {
     register_setting('cgit_core', 'excerpt_length');
     register_setting('cgit_core', 'excerpt_more');
 
+    // Notifications
+    register_setting('cgit_core', 'hide_update_notifications');
+
 }
 
 /**
@@ -248,6 +251,24 @@ function cgit_render_settings_page() {
                 </th>
                 <td>
                     <input type="text" name="excerpt_more" id="excerpt_more" value="<?php echo htmlspecialchars(get_option('excerpt_more')); ?>" />
+                </td>
+            </tr>
+
+        </table>
+
+        <h3>Notifications</h3>
+
+        <table class="form-table">
+
+            <tr>
+                <th>
+                    Hide notifications for non-admin users
+                </th>
+                <td>
+                    <label>
+                        <input type="checkbox" name="hide_update_notifications" value="1"<?php echo get_option('hide_update_notifications') ? ' checked="checked"' : ''; ?> />
+                        Update notifications
+                    </label>
                 </td>
             </tr>
 

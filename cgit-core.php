@@ -52,3 +52,4 @@ include CGIT_CORE_PATH . 'includes/editor.php';
 include CGIT_CORE_PATH . 'includes/image-attributes.php';
 include CGIT_CORE_PATH . 'includes/spam-protection.php';
 include CGIT_CORE_PATH . 'includes/excerpt.php';
+include CGIT_CORE_PATH . 'includes/notifications.php';
