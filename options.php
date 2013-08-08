@@ -35,6 +35,9 @@ function cgit_register_settings() {
     // Notifications
     register_setting('cgit_core', 'hide_update_notifications');
 
+    // Welcome message
+    register_setting('cgit_core', 'welcome_message');
+
 }
 
 /**
@@ -269,6 +272,21 @@ function cgit_render_settings_page() {
                         <input type="checkbox" name="hide_update_notifications" value="1"<?php echo get_option('hide_update_notifications') ? ' checked="checked"' : ''; ?> />
                         Update notifications
                     </label>
+                </td>
+            </tr>
+
+        </table>
+
+        <h3>Welcome message</h3>
+
+        <table class="form-table">
+
+            <tr>
+                <th>
+                    <label for="welcome_message">Salutation (default "Howdy,")</label>
+                </th>
+                <td>
+                    <input type="text" name="welcome_message" id="welcome_message" value="<?php echo htmlspecialchars(get_option('welcome_message')); ?>" />
                 </td>
             </tr>
 
