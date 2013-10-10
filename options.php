@@ -16,6 +16,8 @@ function cgit_register_settings() {
     register_setting('cgit_core', 'hide_comments');
     register_setting('cgit_core', 'hide_categories');
     register_setting('cgit_core', 'hide_tags');
+    register_setting('cgit_core', 'hide_profile');
+    register_setting('cgit_core', 'hide_tools');
 
     // Editor
     register_setting('cgit_core', 'editor_hide_media');
@@ -158,6 +160,27 @@ function cgit_render_settings_page() {
                     <label>
                         <input type="checkbox" name="hide_tags" value="1"<?php echo get_option('hide_tags') ? ' checked="checked"' : ''; ?> />
                         Tags
+                    </label>
+                </td>
+            </tr>
+
+            <tr>
+                <th rowspan="2">
+                    Hide options menus
+                </th>
+                <td>
+                    <label>
+                        <input type="checkbox" name="hide_profile" value="1"<?php echo get_option('hide_profile') ? ' checked="checked"' : ''; ?> />
+                        Profile
+                    </label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>
+                        <input type="checkbox" name="hide_tools" value="1"<?php echo get_option('hide_tools') ? ' checked="checked"' : ''; ?> />
+                        Tools
                     </label>
                 </td>
             </tr>

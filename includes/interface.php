@@ -20,6 +20,9 @@ function cgit_hide_menu_items() {
         if(get_option('hide_categories'))   remove_submenu_page('edit.php', 'edit-tags.php?taxonomy=category'); // Posts | Categories
         if(get_option('hide_tags'))         remove_submenu_page('edit.php', 'edit-tags.php?taxonomy=post_tag'); // Posts | Tags
 
+        if(get_option('hide_profile'))      remove_menu_page('profile.php'); // Profile
+        if(get_option('hide_tools'))        remove_menu_page('tools.php'); // Tools
+
     }
 
 }
