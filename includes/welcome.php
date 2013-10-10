@@ -7,7 +7,7 @@
 /**
  * Edit welcome message
  */
-if ( get_option('welcome_message') ) {
+if ( get_option('edit_welcome_message') ) {
 
     function replace_welcome_message( $wp_admin_bar ) {
         $account    = $wp_admin_bar->get_node('my-account');

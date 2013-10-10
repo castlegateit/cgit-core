@@ -36,6 +36,7 @@ function cgit_register_settings() {
     register_setting('cgit_core', 'hide_update_notifications');
 
     // Welcome message
+    register_setting('cgit_core', 'edit_welcome_message');
     register_setting('cgit_core', 'welcome_message');
 
 }
@@ -283,7 +284,19 @@ function cgit_render_settings_page() {
 
             <tr>
                 <th>
-                    <label for="welcome_message">Salutation (default "Howdy,")</label>
+                    Edit message
+                </th>
+                <td>
+                    <label>
+                        <input type="checkbox" name="edit_welcome_message" value="1"<?php echo get_option('edit_welcome_message') ? ' checked="checked"' : ''; ?> />
+                        Edit the welcome message (default "Howdy,")
+                    </label>
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="welcome_message">Welcome message text</label>
                 </th>
                 <td>
                     <input type="text" name="welcome_message" id="welcome_message" value="<?php echo htmlspecialchars(get_option('welcome_message')); ?>" />
