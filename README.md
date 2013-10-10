@@ -5,6 +5,8 @@ interface and HTML output of any WordPress site.
 
 ## Features
 
+### Options
+
 *   Hide the admin toolbar
 *   Hide menu items in the Dashboard for non-admin users
 *   Hide presentational markup controls
@@ -14,6 +16,17 @@ interface and HTML output of any WordPress site.
 *   Obfuscate email addresses
 *   Change excerpt length and ellipsis
 *   Change the welcome message
+
+### Functions
+
+The Core plugin also defines a few useful functions that can be used anywhere
+in your WordPress theme.
+
+*   `cgit_obfuscate($str)` returns an obfuscated version of `$str` for use
+    with email addresses.
+*   `cgit_obfuscate_link($str, $text)` returns a complete `mailto:` link to
+    the email address `$str`. You can use `$text` to set the text of the link;
+    otherwise it defaults to `$str` (also obfuscated).
 
 ## Installation
 

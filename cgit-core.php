@@ -44,6 +44,11 @@ define('CGIT_CORE_PATH', plugin_dir_path(__FILE__));
 include CGIT_CORE_PATH . 'options.php';
 
 /**
+ * Utility functions
+ */
+include CGIT_CORE_PATH . 'functions.php';
+
+/**
  * Core plugin functions
  */
 include CGIT_CORE_PATH . 'includes/toolbar.php';
