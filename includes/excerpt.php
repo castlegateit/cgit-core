@@ -18,8 +18,8 @@ if(get_option('excerpt_length')) {
 }
 
 /**
-* Edit excerpt ellipsis
-*/
+ * Edit excerpt ellipsis
+ */
 if(get_option('excerpt_more')) {
 
     function cgit_edit_excerpt_more($more) {
