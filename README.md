@@ -16,6 +16,7 @@ interface and HTML output of any WordPress site.
 *   Obfuscate email addresses
 *   Change excerpt length and ellipsis
 *   Change the welcome message
+*   Force all TinyMCE pasting to be plaintext
 
 ### Functions
 
