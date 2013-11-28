@@ -22,6 +22,7 @@ function cgit_register_settings() {
     // Editor
     register_setting('cgit_core', 'editor_hide_media');
     register_setting('cgit_core', 'editor_hide_controls');
+    register_setting('cgit_core', 'editor_plaintext_paste');
 
     // Image attributes
     register_setting('cgit_core', 'remove_image_titles');
@@ -211,6 +212,18 @@ function cgit_render_settings_page() {
                     </label>
                 </td>
             </tr>
+            
+            <tr>
+                <th>
+                    Pasting content
+                </th>
+                <td>
+                    <label>
+                        <input type="checkbox" name="editor_plaintext_paste" value="1"<?php echo get_option('editor_plaintext_paste') ? ' checked="checked"' : ''; ?> />
+                        Force plaintext paste
+                    </label>
+                </td>
+            </tr>             
 
         </table>
 

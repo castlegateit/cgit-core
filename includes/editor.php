@@ -46,3 +46,37 @@ if(get_option('editor_hide_controls')) {
     add_filter('mce_buttons_2', 'cgit_hide_editor_controls');
 
 }
+
+
+/**
+ * Force pasted content to be text-only
+ *
+ * Based on GNU-licensed code by Till Krüss (www.tillkruess.com)
+ * 
+ */
+if (get_option('editor_plaintext_paste')) {
+    
+	function forcePasteAsPlainText( $mceInit ) {
+		$mceInit[ 'paste_text_sticky' ] = true;
+		$mceInit[ 'paste_text_sticky_default' ] = true;
+		return $mceInit;
+	}
+    
+	function loadPasteInTeeny( $plugins ) {
+		$plugins[] = 'paste';
+		return $plugins;
+	}
+
+	function removePasteAsPlainTextButton( $buttons ) {
+		if( ( $key = array_search( 'pastetext', $buttons ) ) !== false ) {
+			unset( $buttons[ $key ] );
+		}
+		return $buttons;
+	}
+    
+    add_filter( 'tiny_mce_before_init', 'forcePasteAsPlainText' );
+    add_filter( 'teeny_mce_before_init', 'forcePasteAsPlainText' );
+    add_filter( 'teeny_mce_plugins', 'loadPasteInTeeny' );
+    add_filter( 'mce_2_buttons', 'removePasteAsPlainTextButton' );
+    add_filter( 'mce_buttons', 'removePasteAsPlainTextButton' );
+}
