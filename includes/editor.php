@@ -37,6 +37,7 @@ if(get_option('editor_hide_controls')) {
             'outdent',
             'strikethrough',
             'underline',
+            'wp_more'
         );
         $new_controls = array_diff($controls, $old_controls);
         return $new_controls;
@@ -77,6 +78,6 @@ if (get_option('editor_plaintext_paste')) {
     add_filter( 'tiny_mce_before_init', 'forcePasteAsPlainText' );
     add_filter( 'teeny_mce_before_init', 'forcePasteAsPlainText' );
     add_filter( 'teeny_mce_plugins', 'loadPasteInTeeny' );
-    add_filter( 'mce_2_buttons', 'removePasteAsPlainTextButton' );
+    add_filter( 'mce_buttons_2', 'removePasteAsPlainTextButton' );
     add_filter( 'mce_buttons', 'removePasteAsPlainTextButton' );
 }
