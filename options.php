@@ -22,6 +22,7 @@ function cgit_register_settings() {
     // Editor
     register_setting('cgit_core', 'editor_hide_media');
     register_setting('cgit_core', 'editor_hide_controls');
+    register_setting('cgit_core', 'editor_hide_block_elements');
     register_setting('cgit_core', 'editor_plaintext_paste');
 
     // Image attributes
@@ -193,7 +194,7 @@ function cgit_render_settings_page() {
         <table class="form-table">
 
             <tr>
-                <th rowspan="2">
+                <th rowspan="3">
                     Hide editor controls
                 </th>
                 <td>
@@ -212,7 +213,16 @@ function cgit_render_settings_page() {
                     </label>
                 </td>
             </tr>
-            
+
+            <tr>
+                <td>
+                    <label>
+                        <input type="checkbox" name="editor_hide_block_elements" value="1"<?php echo get_option('editor_hide_block_elements') ? ' checked="checked"' : ''; ?> />
+                        Extra block level elements (<code>h1</code>, <code>pre</code>, <code>address</code>, etc.)
+                    </label>
+                </td>
+            </tr>
+
             <tr>
                 <th>
                     Pasting content

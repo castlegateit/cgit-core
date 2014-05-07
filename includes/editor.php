@@ -48,6 +48,19 @@ if(get_option('editor_hide_controls')) {
 
 }
 
+/**
+ * Hide extra block level elements
+ */
+if(get_option('editor_hide_block_elements')) {
+
+    function cgit_editor_hide_block_elements($init) {
+        $init['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4';
+        return $init;
+    }
+
+    add_filter('tiny_mce_before_init', 'cgit_editor_hide_block_elements');
+
+}
 
 /**
  * Force pasted content to be text-only
