@@ -69,11 +69,16 @@ if(get_option('editor_hide_block_elements')) {
  * 
  */
 if (get_option('editor_plaintext_paste')) {
-    
+
 	function forcePasteAsPlainText( $mceInit ) {
-		$mceInit[ 'paste_text_sticky' ] = true;
-		$mceInit[ 'paste_text_sticky_default' ] = true;
-		return $mceInit;
+        global $tinymce_version;
+
+        if ( $tinymce_version[0] < 4 ) {
+            $mceInit[ 'paste_text_sticky' ] = true;
+            $mceInit[ 'paste_text_sticky_default' ] = true;
+        } else {
+            $mceInit[ 'paste_as_text' ] = true;
+        }
 	}
     
 	function loadPasteInTeeny( $plugins ) {
