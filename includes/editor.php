@@ -66,7 +66,7 @@ if(get_option('editor_hide_block_elements')) {
  * Force pasted content to be text-only
  *
  * Based on GNU-licensed code by Till Krüss (www.tillkruess.com)
- * 
+ *
  */
 if (get_option('editor_plaintext_paste')) {
 
@@ -79,8 +79,11 @@ if (get_option('editor_plaintext_paste')) {
         } else {
             $mceInit[ 'paste_as_text' ] = true;
         }
+
+        return $mceInit;
+
 	}
-    
+
 	function loadPasteInTeeny( $plugins ) {
 		$plugins[] = 'paste';
 		return $plugins;
@@ -92,7 +95,7 @@ if (get_option('editor_plaintext_paste')) {
 		}
 		return $buttons;
 	}
-    
+
     add_filter( 'tiny_mce_before_init', 'forcePasteAsPlainText' );
     add_filter( 'teeny_mce_before_init', 'forcePasteAsPlainText' );
     add_filter( 'teeny_mce_plugins', 'loadPasteInTeeny' );
