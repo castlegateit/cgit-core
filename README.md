@@ -1,5 +1,9 @@
 # Castlegate IT Core Plugin
 
+**Development of Castlegate IT Core has now stopped. The functions provided by Core can now be found in the [Admin Tweaks](https://github.com/castlegateit/cgit-wp-admin-tweaks) and [Obfuscator](https://github.com/castlegateit/cgit-wp-obfuscator) plugins.**
+
+---
+
 Castlegate IT Core is a WordPress plugin that makes it easy to tweak the admin
 interface and HTML output of any WordPress site.
 
@@ -34,7 +38,7 @@ in your WordPress theme.
 Copy the plugin directory into the `wp-content/plugins` directory in the
 WordPress directory. Then go to the Plugins screen and click Activate Plugin.
 See the [WordPress documentation](http://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation)
-for more details. 
+for more details.
 
 ## License
 
