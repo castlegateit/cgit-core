@@ -1,6 +1,6 @@
 # Castlegate IT Core Plugin
 
-**Development of Castlegate IT Core has now stopped. The functions provided by Core can now be found in the [Admin Tweaks](https://github.com/castlegateit/cgit-wp-admin-tweaks) and [Obfuscator](https://github.com/castlegateit/cgit-wp-obfuscator) plugins.**
+**Development of Castlegate IT Core has now stopped. The functions provided by Core can now be found in the [CGIT WP Tweak Tool](https://github.com/castlegateit/cgit-wp-tweak-tool) and [Obfuscator](https://github.com/castlegateit/cgit-wp-obfuscator) plugins.**
 
 ---
 
